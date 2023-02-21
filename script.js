@@ -25,7 +25,12 @@ class Node {
       let [directionRow, directionCol] = direction
       let neighborRow = row + directionRow
       let neighborCol = col + directionCol
-      if (neighborRow > 0 && neighborCol > 0) {
+      if (
+        neighborRow > 0 &&
+        neighborCol > 0 &&
+        neighborRow < 8 &&
+        neighborCol < 8
+      ) {
         neighbors.push([neighborRow, neighborCol])
       }
     }
